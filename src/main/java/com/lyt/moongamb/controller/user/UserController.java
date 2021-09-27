@@ -1,4 +1,4 @@
-package com.lyt.moongamb.conctroller.user;
+package com.lyt.moongamb.controller.user;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;

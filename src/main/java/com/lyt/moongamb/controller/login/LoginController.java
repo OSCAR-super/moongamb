@@ -1,8 +1,8 @@
-package com.lyt.moongamb.conctroller.login;
+package com.lyt.moongamb.controller.login;
 
-import com.lyt.moongamb.conctroller.login.request.TestReq;
-import com.lyt.moongamb.conctroller.login.request.UserLoginReq;
-import com.lyt.moongamb.conctroller.login.response.TestRes;
+import com.lyt.moongamb.controller.login.request.TestReq;
+import com.lyt.moongamb.controller.login.request.UserLoginReq;
+import com.lyt.moongamb.controller.login.response.TestRes;
 import com.lyt.moongamb.service.LoginService;
 import com.lyt.moongamb.util.Res.RestResult;
 import com.lyt.moongamb.util.Res.ResultUtils;
@@ -11,7 +11,6 @@ import com.lyt.moongamb.util.security.JwtTokenUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
