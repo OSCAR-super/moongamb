@@ -1,8 +1,8 @@
-package com.lyt.moongamb.conctroller.login;
+package com.lyt.moongamb.controller.login;
 
-import com.lyt.moongamb.conctroller.login.request.TestReq;
-import com.lyt.moongamb.conctroller.login.request.UserLoginReq;
-import com.lyt.moongamb.conctroller.login.response.TestRes;
+import com.lyt.moongamb.controller.login.request.TestReq;
+import com.lyt.moongamb.controller.login.request.UserLoginReq;
+import com.lyt.moongamb.controller.login.response.TestRes;
 import com.lyt.moongamb.service.LoginService;
 import com.lyt.moongamb.util.Res.RestResult;
 import com.lyt.moongamb.util.Res.ResultUtils;
@@ -26,8 +26,8 @@ public class LoginController {
     private JwtTokenUtils jwtTokenUtils;
     @Autowired
     private LoginService loginService;
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
     @Autowired
     private AuthUtils authUtils;
 
@@ -44,9 +44,10 @@ public class LoginController {
 
     @PostMapping("/adminLogin")
     public RestResult adminLogin(@Validated @RequestBody UserLoginReq userLoginReq) {
-        //System.out.println(passwordEncoder.encode(userLoginReq.getPassword()));
+//        System.out.println(passwordEncoder.encode(userLoginReq.getPassword()));
         //123qweqwe
         //$2a$10$aOst2pyWL/0xwXlufg3OT.mfX7MFvJmUX9iR6syXUBCf/GSm/wL4W
+        //$2a$10$rDZkVR4Hv4H/HzFQuBlvEOcaUr9SxVXAftuU0YN0/lS0DANh4PKbm
         return loginService.userLogin(userLoginReq);
     }
 

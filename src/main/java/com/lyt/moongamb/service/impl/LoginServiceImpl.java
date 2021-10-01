@@ -1,6 +1,6 @@
 package com.lyt.moongamb.service.impl;
 
-import com.lyt.moongamb.conctroller.login.request.UserLoginReq;
+import com.lyt.moongamb.controller.login.request.UserLoginReq;
 import com.lyt.moongamb.security.entity.MyUserDetails;
 import com.lyt.moongamb.service.LoginService;
 import com.lyt.moongamb.util.Res.RestResult;
@@ -52,7 +52,7 @@ public class LoginServiceImpl implements LoginService {
             result.setCode(1);
         }
 
-        log.info("管理员:{} 已经登入。。。本次权限为:{}", loginUser.getUsername(), loginUser.getAuthorities().toString());
+        log.info("用户:{} 已经登入。。。本次权限为:{}", loginUser.getUsername(), loginUser.getAuthorities().toString());
 
         //主动失效 设置黑名单 并关闭已存在socket
         if (redisService.userLogoutByServer(userLoginReq.getUsername()) == 0) {

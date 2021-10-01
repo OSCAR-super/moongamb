@@ -1,4 +1,4 @@
-package com.lyt.moongamb.conctroller.login.response;
+package com.lyt.moongamb.controller.login.response;
 
 import lombok.Data;
 

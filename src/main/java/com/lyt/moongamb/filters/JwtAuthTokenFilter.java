@@ -39,18 +39,14 @@ public class JwtAuthTokenFilter extends OncePerRequestFilter {
                 if (account != null && SecurityContextHolder.getContext().getAuthentication() == null) {
 
                     MyUserDetails userDetails = new MyUserDetails();
-                    if ("admin".equals(type)) {
-                        userDetails = (MyUserDetails) userDetailService.loadUserByUsername(account);
-                    } else if ("user".equals(type)) {
-                        userDetails = (MyUserDetails) userDetailService.loadUserByUsername(account);
-                    }
+                    userDetails = (MyUserDetails) userDetailService.loadUserByUsername(account);
 
                     //判断token是否有效 包括 新旧token redis黑名单
                     if (jwtTokenUtils.validateToken(token, userDetails)) {
                         //给使用该JWT令牌的用户进行授权
 
                         log.info("account: {} 已登入 tpye: {} ", account, type);
-                        if ("admin".equals(type)) {
+                        if ("user".equals(type)) {
                             UsernamePasswordAuthenticationToken authenticationToken =
                                     new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                             //设置用户身份授权

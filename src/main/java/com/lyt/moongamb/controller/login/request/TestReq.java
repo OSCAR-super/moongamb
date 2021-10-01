@@ -1,4 +1,4 @@
-package com.lyt.moongamb.conctroller.login.request;
+package com.lyt.moongamb.controller.login.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
