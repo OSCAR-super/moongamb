@@ -2,9 +2,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1/moongamb?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
-    username: root
-    password: 123456
+    url: jdbc:mysql://****************************
+    username: *****
+    password: *****
     hikari:
       max-lifetime: 500000
 
@@ -13,7 +13,7 @@ spring:
     type: redis
   redis:
     host: 127.0.0.1
-    port: 6379
+    port: ****
     jedis:
       pool:
         max-active: 8
@@ -23,13 +23,13 @@ spring:
     lettuce:
       shutdown-timeout: 0
     timeout: 1200
-#    password: 123456
+#    password: ********
 server:
-  port: 8996
+  port: *********
   tomcat:
     uri-encoding: UTF-8
 mybatis-plus:
   global-config:
     db-config:
-      table-prefix: tb_
+      table-prefix: *******
 
