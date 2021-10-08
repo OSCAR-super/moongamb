@@ -23,11 +23,11 @@ import java.util.Map;
 @Slf4j
 public class JwtTokenUtils {
     //密钥
-    private String secret = "moongamb";
+    private String secret = "*********";
 
     private int expiration = 3600000;
 
-    public static  final String TOKEN_HEADER = "token";
+    public static  final String TOKEN_HEADER = "I******";
 
 
     private static Key KEY = null;
