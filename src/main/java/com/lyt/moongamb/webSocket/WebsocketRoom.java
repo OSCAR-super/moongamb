@@ -95,7 +95,7 @@ public class WebsocketRoom {
         for (int i = 0; i<6; i++){
             int a=rand.nextInt(6)+1;
             integers.add(a);
-            messageBuilder.append(" ").append(a);
+            messageBuilder.append(" ").append("<img src=\"../../resource/s").append(a).append(".png\">");
         }
         //message="摇到了："+(rand.nextInt(6)+1)+" "+(rand.nextInt(6)+1)+" "+(rand.nextInt(6)+1)+" "+(rand.nextInt(6)+1)+" "+(rand.nextInt(6)+1)+" "+(rand.nextInt(6)+1)+"<br/>";
         if (integers.contains(4)&&!integers.contains(1)&&!integers.contains(2)&&!integers.contains(3)&&!integers.contains(4)&&!integers.contains(5)){
